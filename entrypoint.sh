@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
 
 # 设置各变量
-UUID='8faaca10-4ab7-4f01-afeb-ebd2890bab35'
-VMESS_WSPATH='/dash'
-VLESS_WSPATH='/dash'
-TROJAN_WSPATH='/dash'
+UUID='e9bc2255-b7d5-4924-acd6-dd2ffde0c974'
+VMESS_WSPATH='/client-log'
+VLESS_WSPATH='/client-dash'
+TROJAN_WSPATH='/Dashboard'
 SS_WSPATH='/dash'
 
 generate_config() {
-  cat > config.json << EOF
+  cat &gt; config.json &lt;&lt; EOF
 {
     "log": {
         "access": "/dev/null",
         "error": "/dev/null",
-        "loglevel": "none"
+        "loglevel": "None"
     },
     "inbounds": [
         {
             "port": 8080,
             "protocol": "vless",
-            "settings": {
+            "Settings": {
                 "clients": [
                     {
                         "id": "${UUID}",
